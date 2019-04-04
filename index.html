@@ -23,6 +23,16 @@ function startTime() {
 var mm = today.getMonth() + 1; //January is 0!
 
 var yyyy = today.getFullYear();
+	dd=dd+"";
+mm=mm+"";
+if(dd.length==1)
+{
+dd="0"+dd;
+}
+if(mm.length==1)
+{
+mm="0"+mm;
+}
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
