@@ -11,7 +11,7 @@
     <style>
     h2{
        font-weight: bold ;
-	   font-size:20px;
+	   font-size:22px;
 	   font-family:arial;
     }
     
@@ -34,10 +34,21 @@ if(mm.length==1)
 mm="0"+mm;
 }
   var h = today.getHours();
+	  var ampm = h >= 12 ? 'PM' : 'AM';
   var m = today.getMinutes();
   var s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
+	  if(h.length==1)
+{
+h="0"+h;
+}if(m.length==1)
+{
+m="0"+m;
+}if(s.length==1)
+{
+s="0"+s;
+}
   document.getElementById('txt').innerHTML =
   dd+"/"+mm+"/"+yyyy+" "+h + ":" + m + ":" + s;
   var t = setTimeout(startTime, 500);
