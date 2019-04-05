@@ -37,10 +37,15 @@ mm="0"+mm;
 }
   var h = today.getHours();
 	  var ampm = h >= 12 ? 'PM' : 'AM';
-  var m = today.getMinutes();
+if(h>12){h=h-12;}
+	
+	var m = today.getMinutes();
   var s = today.getSeconds();
   m = checkTime(m);
   s = checkTime(s);
+h=h+"";
+s=s+"";
+m=m+"";
 	  if(h.length==1)
 {
 h="0"+h;
